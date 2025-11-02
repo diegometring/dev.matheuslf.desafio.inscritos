@@ -2,7 +2,7 @@ package dev.matheuslf.desafio.inscritos.entity;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,8 +13,8 @@ public class Project {
     private Long id;
     private String name;
     private String description;
-    private Date startDate;
-    private Date endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
 
     @OneToMany(
             mappedBy = "project",

@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -17,22 +18,19 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
     private String title;
-
     private String description;
 
     @Enumerated(EnumType.STRING)
     private statusTask Status;
 
     @Enumerated(EnumType.STRING)
-    private priority Enum;
+    private priority Priority;
 
-    private Date dueDate;
+    private LocalDateTime dueDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id")
