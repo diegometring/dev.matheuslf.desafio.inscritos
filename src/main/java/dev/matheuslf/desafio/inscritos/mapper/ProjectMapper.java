@@ -11,4 +11,5 @@ public interface ProjectMapper {
     ProjectResponseDTO entityToProjectResponseDTO(Project project);
 
     Project projectRequestDTOToEntity(ProjectRequestDTO projectRequestDTO);
+
 }
