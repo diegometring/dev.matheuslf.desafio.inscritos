@@ -1,6 +1,6 @@
 package dev.matheuslf.desafio.inscritos.enums;
 
-public enum priority {
+public enum PriorityTask {
     LOW,
     MEDIUM,
     HIGH

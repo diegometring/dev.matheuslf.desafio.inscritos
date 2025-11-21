@@ -10,6 +10,7 @@ import org.mapstruct.Mapper;
 public interface TaskMapper {
 
     TaskResponseDTO entityToTaskResponseDTO(Task task);
-    Task taskResponseDTOToEntity(TaskRequestDTO taskRequestDTO, Project project);
+    Task taskRequestDTOToEntityWithProject(TaskRequestDTO taskRequestDTO, Project project);
+    Task taskRequestDTOToEntity(TaskRequestDTO taskRequestDTO);
 
 }

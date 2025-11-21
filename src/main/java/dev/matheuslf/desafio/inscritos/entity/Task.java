@@ -1,7 +1,7 @@
 package dev.matheuslf.desafio.inscritos.entity;
 
-import dev.matheuslf.desafio.inscritos.enums.priority;
-import dev.matheuslf.desafio.inscritos.enums.statusTask;
+import dev.matheuslf.desafio.inscritos.enums.PriorityTask;
+import dev.matheuslf.desafio.inscritos.enums.StatusTask;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Table(name = "Task")
@@ -25,10 +24,10 @@ public class Task {
     private String description;
 
     @Enumerated(EnumType.STRING)
-    private statusTask Status;
+    private StatusTask statusTask;
 
     @Enumerated(EnumType.STRING)
-    private priority Priority;
+    private PriorityTask priorityTask;
 
     private LocalDateTime dueDate;
 

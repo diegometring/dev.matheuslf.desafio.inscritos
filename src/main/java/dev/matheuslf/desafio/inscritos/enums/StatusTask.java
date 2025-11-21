@@ -1,6 +1,6 @@
 package dev.matheuslf.desafio.inscritos.enums;
 
-public enum statusTask {
+public enum StatusTask {
         TODO,
         DOING,
         DONE
